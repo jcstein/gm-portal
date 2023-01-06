@@ -10,7 +10,7 @@ import { Chain } from 'wagmi/chains';
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 
 const ethermintChain: Chain = {
-  id: 69420,
+  id: 9000,
   name: 'Ethermint',
   network: 'ethermint',
   nativeCurrency: {
