@@ -64,7 +64,7 @@ function App() {
       <h1>GM Portal</h1>
       {!address ? (<div>
         <h3>Getting Started</h3>
-      <p>First, you will need to connect your Ethereum wallet to Ethermint to display the posts from the smart contract and make posts.</p>
+      <p>First, you will need to connect your Ethereum wallet to the Ethermint Sovereign Rollup to display the posts from the smart contract and make posts.</p>
       <p>DM joshcs.lens or @JoshCStein with your wallet address to receive test tokens.</p>
       </div> ) : null}
       <br />
