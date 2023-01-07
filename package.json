@@ -12,6 +12,7 @@
     "@rainbow-me/rainbowkit": "^0.8.1",
     "ethers": "^5.7.2",
     "ipfs-http-client": "^59.0.0",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.4",
