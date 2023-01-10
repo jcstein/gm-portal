@@ -23,7 +23,7 @@ function App() {
     const provider = new ethers.providers.Web3Provider((window.ethereum))
     const contract = new ethers.Contract(contractAddress, WavePortal.abi, provider)
     let data = await contract.getAllWaves()
-    data = data.map((d: any) => ({
+    data = data.map((d: { waver: string, message: string; timestamp: string }) => ({
       waver: d['waver'],
       message: d['message'],
       timestamp: d['timestamp'],
