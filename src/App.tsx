@@ -131,7 +131,7 @@ const innerContainerStyle = {
   width: '100%',
   maxWidth: '800px',
   margin: '0 auto',
-  textAlign: 'left'
+  textAlign: 'left' as any
 }
 
 const formContainerStyle = {
