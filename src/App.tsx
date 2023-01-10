@@ -130,7 +130,7 @@ const innerContainerStyle = {
 
 const formContainerStyle = {
   display: 'flex',
-  flexDirection: 'column',
+  flexDirection: 'column' as any,
   alignItems: 'center'
 }
 
@@ -147,7 +147,7 @@ const postContainerStyle = {
   width: '90%',
   maxWidth: '800px',
   display: 'flex',
-  flexDirection: 'column',
+  flexDirection: 'column' as any,
   alignItems: 'start',
   justifyContent: 'center',
 }
