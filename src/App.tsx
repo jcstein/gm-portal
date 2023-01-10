@@ -6,7 +6,7 @@ import WavePortal from '../WavePortal.json'
 import { useAccount } from "wagmi";
 import moment from 'moment'
 
-const contractAddress = '0x18f66e7a157da78bc3b173d49a43e57ee24dd9c5'
+const contractAddress = '0xf96e0040730456859a347ebf4161967656a4c394'
 
 function App() {
   useEffect(() => {
