@@ -20,13 +20,13 @@ function App() {
   const { address } = useAccount();
 
   async function getAllWaves() {
-    const provider = new ethers.providers.Web3Provider((window.ethereum as any))
+    const provider = new ethers.providers.Web3Provider((window.ethereum))
     const contract = new ethers.Contract(contractAddress, WavePortal.abi, provider)
     let data = await contract.getAllWaves()
     data = data.map(d => ({
       waver: d['waver'],
-      message: d['message'].toString(),
-      timestamp: d['timestamp'].toString(),
+      message: d['message'],
+      timestamp: d['timestamp'],
     }))
 
     setPosts(data)
@@ -35,7 +35,6 @@ function App() {
   async function getTotalWaves() {
     const provider = new ethers.providers.Web3Provider((window.ethereum as any))
     const contract = new ethers.Contract(contractAddress, WavePortal.abi, provider)
-    // const totalWaves = await contract.getTotalWaves.toString()
     const totalWaves = await contract.getTotalWaves()
     console.log('total waves', totalWaves)
     setTotalWaves(totalWaves.toString())
@@ -63,10 +62,15 @@ function App() {
       <div style={innerContainerStyle}>
       <h1>GM Portal</h1>
       {!address ? (<div>
+        <h3>What is GM?</h3>
+      <p>GM means good morning. It's GM o'clock somewhere, so there's never a bad time to say GM.</p>
         <h3>Getting Started</h3>
-      <p>First, you will need to connect your Ethereum wallet to the Ethermint Sovereign Rollup to display the posts from the smart contract and make posts.</p>
-      <p>DM joshcs.lens or @JoshCStein with your wallet address to receive test tokens.</p>
-      </div> ) : null}
+      <p>First, you will need to connect your Ethereum wallet to the Ethermint Sovereign Rollup to display the posts from the smart contract and post a GM.</p>
+      <p>DM joshcs.lens or @JoshCStein with your Ethereum wallet address to receive EMINT tokens.</p>
+      <h3>Nice, what's going on under the hood?</h3>
+      <p>This GM Portal is built with <a href="https://celestia.org" target="_blank">Celestia</a>, <a href ="https://docs.celestia.org/developers/rollmint" target="_blank">RollKit</a>, & <a href="https://github.com/celestiaorg/ethermint" target="_blank">Ethermint</a>.</p>
+      <p>The GM Portal is a <a href="https://celestia.org/glossary/sovereign-rollup" target="_blank">sovereign rollup</a> built on Celestia to provide <a href="https://celestia.org/glossary/data-availability" target="_blank">data availability</a> and <a href="https://ethereum.org/en/developers/docs/consensus-mechanisms/" target="_blank">consensus</a>, leveraging Ethermint with RollKit as the <a href="https://celestia.org/glossary/execution-environment" target="_blank">execution environment</a>.</p>
+      <p>This allows users to securely create and share blog posts on the blockchain without the need for a centralized server or authority.</p></div> ) : null}
       <br />
       <h3 style={{ justifyContent: 'right', textAlign: 'right'}}>Connect your Ethereum wallet to begin ✨</h3>
       <div style={buttonContainerStyle}>
@@ -88,7 +92,7 @@ function App() {
               posts.slice().reverse().map((post, index) => (
                 <div key={index}>
                   <h2>{post.message}</h2>
-                  <p>📤 From: {post.waver}</p>
+                  <p className="wallet-address">📤 From: {post.waver}</p>
                   <p>⏰ GM'd at: {moment.unix(post.timestamp).format('lll')}</p>
                 </div>
               ))
@@ -116,8 +120,6 @@ function App() {
 }
 
 const outerContainerStyle = {
-  width: '90vw',
-  height: '100vh',
   padding: '50px 0px',
 }
 
