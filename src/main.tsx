@@ -5,7 +5,7 @@ import App from './App'
 import './index.css'
 import '@rainbow-me/rainbowkit/styles.css';
 import { connectorsForWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
-import { injectedWallet, metaMaskWallet, walletConnectWallet } from '@rainbow-me/rainbowkit/wallets';
+import { injectedWallet, metaMaskWallet, walletConnectWallet, coinbaseWallet } from '@rainbow-me/rainbowkit/wallets';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { Chain } from 'wagmi/chains';
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
@@ -44,6 +44,7 @@ const connectors = connectorsForWallets([
       injectedWallet({ chains }),
       metaMaskWallet({ chains }),
       walletConnectWallet({ chains }),
+      coinbaseWallet({ chains, appName: 'GM Portal' }),
     ],
   },
 ]);
