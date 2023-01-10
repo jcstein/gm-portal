@@ -65,7 +65,7 @@ function App() {
       <p>GM means good morning. It's GM o'clock somewhere, so there's never a bad time to say GM, Gm, or gm.</p>
       <h3>Getting Started</h3>
       <p>First, DM me at <a href="https://twitter.com/JoshCStein" target="_blank">@JoshCStein</a> or <a href="https://www.lensfrens.xyz/joshcs.lens" target="_blank">joshcs.lens</a> with your Ethereum wallet address to receive EMINT tokens.</p>
-      <p>Then, you will need to connect your Ethereum wallet below to the Ethermint Sovereign Rollup to display the posts from the smart contract and post a GM.</p>
+      <p>Then, you will need to connect your Ethereum wallet below to the Ethermint Sovereign Rollup to display the posts from the smart contract and post a GM. You only need EMINT to post.</p>
       </div> ) : null}
       {!address ? (<div>
         <br/>
