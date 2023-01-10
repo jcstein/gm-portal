@@ -1,5 +1,3 @@
-// @ts-ignore
-
 import './App.css'
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useState, useEffect, SetStateAction } from 'react'
@@ -96,12 +94,9 @@ function App() {
             {
               posts.slice().reverse().map((post, index) => (
                 <div key={index}>
-                  // @ts-ignore
-                  <h2>{post.message}</h2>
-                  // @ts-ignore
-                  <p className="wallet-address">📤 From: {post.waver}</p>
-                  // @ts-ignore
-                  <p>⏰ GM'd at: {moment.unix(post.timestamp).format('lll')}</p>
+                  <h2>{(post as any).message}</h2>
+                  <p className="wallet-address">📤 From: {(post as any).waver}</p>
+                  <p>⏰ GM'd at: {moment.unix((post as any).timestamp).format('lll')}</p>
                 </div>
               ))
             }
