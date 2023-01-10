@@ -23,7 +23,7 @@ function App() {
     const provider = new ethers.providers.Web3Provider((window.ethereum))
     const contract = new ethers.Contract(contractAddress, WavePortal.abi, provider)
     let data = await contract.getAllWaves()
-    data = data.map(d => ({
+    data = data.map((d: any) => ({
       waver: d['waver'],
       message: d['message'],
       timestamp: d['timestamp'],
@@ -152,7 +152,6 @@ const postContainerStyle = {
   alignItems: 'start',
   justifyContent: 'center',
 }
-
 
 const buttonStyle = {
   marginTop: 15,
