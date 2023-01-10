@@ -6,7 +6,7 @@ import WavePortal from '../WavePortal.json'
 import { useAccount } from "wagmi";
 import moment from 'moment'
 
-const contractAddress = '0xa7df09af4e5e90db542639d4e97fd2585abe66d3'
+const contractAddress = '0x63c6d818e4889f2fd5f271fc622bac20ea459f01'
 
 function App() {
   useEffect(() => {
@@ -135,11 +135,17 @@ const formContainerStyle = {
 }
 
 const inputStyle = {
-  width: '400px',
   marginBottom: '10px',
   padding: '10px',
   height: '40px',
-}
+  '@media (min-width: 500px)': {
+    height: '50px',
+  },
+  '@media (min-width: 800px)': {
+    height: '60px',
+  },
+};
+
 
 const postContainerStyle = {
   margin: '0 auto',
