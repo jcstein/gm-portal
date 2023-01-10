@@ -61,24 +61,28 @@ function App() {
       <div style={innerContainerStyle}>
       <h1>GM Portal</h1>
       {!address ? (<div>
-        <h3>What is GM?</h3>
-      <p>GM means good morning. It's GM o'clock somewhere, so there's never a bad time to say GM.</p>
-        <h3>Getting Started</h3>
-      <p>First, you will need to connect your Ethereum wallet to the Ethermint Sovereign Rollup to display the posts from the smart contract and post a GM.</p>
-      <p>DM joshcs.lens or @JoshCStein with your Ethereum wallet address to receive EMINT tokens.</p>
+      <h3>What is GM?</h3>
+      <p>GM means good morning. It's GM o'clock somewhere, so there's never a bad time to say GM, Gm, or gm.</p>
+      <h3>Getting Started</h3>
+      <p>First, DM joshcs.lens or @JoshCStein on Twitter with your Ethereum wallet address to receive EMINT tokens.</p>
+      <p>Then, you will need to connect your Ethereum wallet to the Ethermint Sovereign Rollup to display the posts from the smart contract and post a GM.</p>
+      </div> ) : null}
+      {!address ? (<div>
+        <h3>Connect your Ethereum wallet to begin ✨</h3>
+      </div> ) : null}
+      <div style={buttonContainerStyle}>
+      <ConnectButton />
+      </div>
+      {!address ? (<div>
+      <br/>
       <h3>Nice, what's going on under the hood?</h3>
       <p>This GM Portal is built with <a href="https://celestia.org" target="_blank">Celestia</a>, <a href ="https://docs.celestia.org/developers/rollmint" target="_blank">RollKit</a>, & <a href="https://github.com/celestiaorg/ethermint" target="_blank">Ethermint</a>.</p>
       <p>The GM Portal is a <a href="https://celestia.org/glossary/sovereign-rollup" target="_blank">sovereign rollup</a> built on Celestia to provide <a href="https://celestia.org/glossary/data-availability" target="_blank">data availability</a> and <a href="https://ethereum.org/en/developers/docs/consensus-mechanisms/" target="_blank">consensus</a>, leveraging Ethermint with RollKit as the <a href="https://celestia.org/glossary/execution-environment" target="_blank">execution environment</a>.</p>
       <p>This allows users to securely create and share blog posts on the blockchain without the need for a centralized server or authority.</p></div> ) : null}
-      <br />
-      <h3 style={{ justifyContent: 'right', textAlign: 'right'}}>Connect your Ethereum wallet to begin ✨</h3>
-      <div style={buttonContainerStyle}>
-      <ConnectButton />
-      </div>
       {address ? (
       <div style={buttonContainerStyle}>
         <button onClick={() => toggleView('view-posts')} style={buttonStyle}>View Posts</button>
-        <button  onClick={() => toggleView('create-post')} style={buttonStyle}>Create Post</button>
+        {viewState !== 'create-post' && <button  onClick={() => toggleView('create-post')} style={buttonStyle}>Create Post</button>}
       </div>
       ) : null}
       {
@@ -138,14 +142,7 @@ const inputStyle = {
   marginBottom: '10px',
   padding: '10px',
   height: '40px',
-  '@media (min-width: 500px)': {
-    height: '50px',
-  },
-  '@media (min-width: 800px)': {
-    height: '60px',
-  },
-};
-
+}
 
 const postContainerStyle = {
   margin: '0 auto',
@@ -168,7 +165,7 @@ const buttonContainerStyle = {
   marginTop: 15,
   marginRight: 5,
   display: 'flex',
-  justifyContent: 'right',
+  justifyContent: 'center',
 }
 
 export default App
