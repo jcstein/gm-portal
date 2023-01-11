@@ -9,3 +9,12 @@
   white-space: pre-wrap; /* preserves white space and wrap long lines */
   word-break: break-all; /* allow breaking of words */
 }
+
+@media screen and (max-width: 500px) {
+  .wallet-address {
+    max-width: 250px; /* or any other desired width */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

@@ -94,7 +94,7 @@ function App() {
             <h3>☀️ Total GMs: {totalWaves}</h3>
             {
               posts.slice().reverse().map((post, index) => (
-                <div key={index}>
+                <div style={postStyle} key={index}>
                   <h2>{(post as any).message}</h2>
                   <p className="wallet-address">📤 From: {(post as any).waver}</p>
                   <p>⏰ GM'd at: {moment.unix((post as any).timestamp).format('lll')}</p>
@@ -148,13 +148,22 @@ const inputStyle = {
 
 const postContainerStyle = {
   margin: '0 auto',
-  padding: '1em',
-  width: '90%',
+  width: '100%',
   maxWidth: '800px',
   display: 'flex',
   flexDirection: 'column' as any,
   alignItems: 'start',
   justifyContent: 'center',
+}
+
+const postStyle = {
+  border: '1px solid rgba(255, 255, 255, .2)',
+  width: '100%',
+  maxWidth: '600px',
+  borderRadius: '13px',
+  padding: '5px 10px 5px 10px',
+  margin: '7px 0 7px 0',
+  background: 'rgba(255, 255, 255, .1)',
 }
 
 const buttonStyle = {
