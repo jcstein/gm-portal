@@ -12,12 +12,20 @@ function App() {
   useEffect(() => {
     getAllWaves()
     getTotalWaves()
-    }, [])
+  }, [])
   const [viewState, setViewState] = useState('view-posts')
   const [posts, setPosts] = useState([])
   const [message, setMessage] = useState('')
   const [totalWaves, setTotalWaves] = useState(0)
   const { address } = useAccount();
+  useEffect(() => {
+    if(address) {
+      getAllWaves()
+      getTotalWaves()
+    }
+  }, [address])
+  const [errorMessage, setErrorMessage] = useState('')
+  
 
   async function getAllWaves() {
     const provider = new ethers.providers.Web3Provider((window.ethereum as any))
@@ -40,12 +48,16 @@ function App() {
   }
 
   async function wave() {
-    const provider = new ethers.providers.Web3Provider((window.ethereum as any))
-    const signer = provider.getSigner()
-    const contract = new ethers.Contract(contractAddress, WavePortal.abi, signer)
-    const tx = await contract.wave(message)
-    await tx.wait()
-    setViewState('view-posts')
+    try {
+      const provider = new ethers.providers.Web3Provider((window.ethereum as any))
+      const signer = provider.getSigner()
+      const contract = new ethers.Contract(contractAddress, WavePortal.abi, signer)
+      const tx = await contract.wave(message)
+      await tx.wait()
+      setViewState('view-posts')
+    } catch (error) {
+      setErrorMessage('You have already GMd!')
+    }
   }
 
   function toggleView(value: SetStateAction<string>) {
@@ -114,6 +126,7 @@ function App() {
                 onChange={e => setMessage(e.target.value)}
                 style={inputStyle}
               />
+              {errorMessage && <div style={{ padding: '5px' }}>{errorMessage}</div>}
               <button onClick={wave}>Create Post</button>
           </div>
         )
@@ -145,7 +158,7 @@ const formContainerStyle = {
 const inputStyle = {
   marginBottom: '10px',
   padding: '10px',
-  height: '40px',
+  height: '30px',
 }
 
 const postContainerStyle = {
