@@ -118,6 +118,7 @@ function App() {
           </div>
         )
       }
+      <br />
       <p style={{ textAlign: 'center'}}>This site is <a href="https://github.com/jcstein/gm-portal" target="_blank">open source 🐱</a></p>
       </div>
     </div>
