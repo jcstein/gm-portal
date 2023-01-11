@@ -15,6 +15,6 @@ Then, you will need to connect your Ethereum wallet below to the Ethermint Sover
 ## Nice, what's going on under the hood?
 This GM Portal is built with Celestia, RollKit, & Ethermint.
 
-The GM Portal is a sovereign rollup built on Celestia to provide data availability and consensus, leveraging Ethermint with RollKit as the execution environment.
+The GM Portal is a smart contract demo on a sovereign rollup built on Celestia to provide data availability and consensus, leveraging Ethermint with RollKit as the execution environment.
 
 This allows users to securely create and share blog posts on the blockchain without the need for a centralized server or authority.
