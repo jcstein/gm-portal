@@ -91,7 +91,8 @@ function App() {
       <h4>Nice, what's going on under the hood?</h4>
       <p>This GM Portal is built with <a href="https://celestia.org" target="_blank">Celestia</a>, <a href ="https://docs.celestia.org/developers/rollmint" target="_blank">RollKit</a>, & <a href="https://github.com/celestiaorg/ethermint" target="_blank">Ethermint</a>.</p>
       <p>The GM Portal is a smart contract demo on a <a href="https://celestia.org/glossary/sovereign-rollup" target="_blank">sovereign rollup</a> built on Celestia to provide <a href="https://celestia.org/glossary/data-availability" target="_blank">data availability</a> and <a href="https://ethereum.org/en/developers/docs/consensus-mechanisms/" target="_blank">consensus</a>, leveraging Ethermint with RollKit as the <a href="https://celestia.org/glossary/execution-environment" target="_blank">execution environment</a>.</p>
-      <p>This allows users to securely create and share blog posts on the blockchain without the need for a centralized server or authority.</p></div> ) : null}
+      <p>This allows users to securely create and share blog posts on the blockchain without the need for a centralized server or authority.</p>
+      <p>This application is deployed on IPFS and can be accessed through ENS or DNS. Read more <a href="https://mirror.xyz/hotjosh.eth/UbInedh4ToAAfsDklzSPb3R1_hVSHIdE97hvxIWYlOo" target="_blank">here 🛸</a></p></div> ) : null}
       {address ? (
       <div style={buttonContainerStyle}>
         <button onClick={() => toggleView('view-posts')} style={buttonStyle}>View Posts</button>
