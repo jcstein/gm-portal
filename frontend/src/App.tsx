@@ -133,7 +133,7 @@ function App() {
         )
       }
       <br />
-      <p style={{ textAlign: 'center'}}>This site is <a href="https://github.com/jcstein/gm-portal" target="_blank">open source 🐱</a></p>
+      <p style={{ textAlign: 'center'}}>This site is <a href="https://github.com/jcstein/gm-portal" target="_blank">open source 🐱</a> and <a href="https://plausible.io/gmportal.xyz" target="_blank">analytics</a> are GDPR compliant</p>
       </div>
     </div>
   )
