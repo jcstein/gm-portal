@@ -37,3 +37,10 @@ yarn
 # Develop site locally
 yarn build
 ```
+
+## Adding your contributions
+
+If you would like to contribute to this repository, please submit an
+[issue](https://github.com/jcstein/gm-portal/issues/new/choose) and
+open a [pull request](https://github.com/jcstein/gm-portal/compare)
+with your changes for the issue.
