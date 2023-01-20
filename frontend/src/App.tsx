@@ -27,7 +27,6 @@ function App() {
   }, [address])
   const [errorMessage, setErrorMessage] = useState('')
   
-
   async function getAllWaves() {
     const provider = new ethers.providers.Web3Provider((window.ethereum as any))
     const contract = new ethers.Contract(contractAddress, WavePortal.abi, provider)
@@ -112,6 +111,7 @@ function App() {
               posts.slice().reverse().map((post, index) => (
                 <div style={postStyle} key={index}>
                   <h2>{(post as any).message}</h2>
+                  {/* <p className="wallet-address">📤 From: {(post as any).waver.slice(0,10) + '...' + (post as any).waver.slice(-6)}</p> */}
                   <p className="wallet-address">📤 From: {(post as any).waver}</p>
                   <p>⏰ GM'd at: {moment.unix((post as any).timestamp).format('lll')}</p>
                 </div>
@@ -132,7 +132,7 @@ function App() {
               />
               {errorMessage && <div style={{ padding: '5px' }}>{errorMessage}</div>}
               <button onClick={wave}>Create Post</button>
-              {loading ? <div style={{padding: '10px'}}>Transaction processing...</div> : null}
+              {!errorMessage && loading ? <div style={{padding: '10px'}}>Transaction processing...</div> : null}
           </div>
         )
       }
