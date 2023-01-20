@@ -2,13 +2,15 @@ import "./polyfills";
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import './index.css'
 import '@rainbow-me/rainbowkit/styles.css';
 import { connectorsForWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { injectedWallet, metaMaskWallet, walletConnectWallet, coinbaseWallet } from '@rainbow-me/rainbowkit/wallets';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { Chain } from 'wagmi/chains';
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
+import { ChakraProvider } from '@chakra-ui/react'
+import { ColorModeScript } from "@chakra-ui/react";
+import theme from "./theme";
 
 const ethermintChain: Chain = {
   id: 9000,
@@ -57,10 +59,13 @@ const wagmiClient = createClient({
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider chains={chains}>
-        <App />
-      </RainbowKitProvider>
-    </WagmiConfig>
+    <ChakraProvider>
+      <WagmiConfig client={wagmiClient}>
+        <RainbowKitProvider chains={chains}>
+          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+          <App />
+        </RainbowKitProvider>
+      </WagmiConfig>
+    </ChakraProvider>
   </React.StrictMode>,
 )

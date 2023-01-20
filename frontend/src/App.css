@@ -1,20 +1,12 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.wallet-address {
-  white-space: pre-wrap; /* preserves white space and wrap long lines */
-  word-break: break-all; /* allow breaking of words */
-}
-
-@media screen and (max-width: 500px) {
-  .wallet-address {
-    max-width: 250px; /* or any other desired width */
+.address {
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    width: 100%;
   }
-}
+  
+  @media (max-width: 600px) {
+    .address {
+      max-width: 27ch;
+    }
+  }
