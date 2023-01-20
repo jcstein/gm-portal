@@ -18,11 +18,12 @@ function App() {
   const [message, setMessage] = useState('')
   const [totalWaves, setTotalWaves] = useState(0)
   const { address } = useAccount();
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     if(address) {
       getAllWaves()
       getTotalWaves()
-    }
+    }``
   }, [address])
   const [errorMessage, setErrorMessage] = useState('')
   
@@ -48,12 +49,14 @@ function App() {
   }
 
   async function wave() {
+    setLoading(true);
     try {
       const provider = new ethers.providers.Web3Provider((window.ethereum as any))
       const signer = provider.getSigner()
       const contract = new ethers.Contract(contractAddress, WavePortal.abi, signer)
       const tx = await contract.wave(message)
       await tx.wait()
+      setLoading(false);
       setViewState('view-posts')
     } catch (error) {
       setErrorMessage('You have already GMd!')
@@ -129,6 +132,7 @@ function App() {
               />
               {errorMessage && <div style={{ padding: '5px' }}>{errorMessage}</div>}
               <button onClick={wave}>Create Post</button>
+              {loading ? <div style={{padding: '10px'}}>Transaction processing...</div> : null}
           </div>
         )
       }
