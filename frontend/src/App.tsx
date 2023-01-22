@@ -108,8 +108,8 @@ function App() {
           viewState === 'view-posts' && address && (
             <div style={{ textAlign: 'left'}}>
               <div>
-              <Heading size="lg" pb="3">Posts</Heading>
-              <Heading size="md" pb="3">☀️ Total GMs: {totalWaves}</Heading>
+              <Heading size="lg" pb="3" textAlign="center">Posts</Heading>
+              <Heading size="md" pb="3" textAlign="center">☀️ Total GMs: {totalWaves}</Heading>
               {
                 posts.slice().reverse().map((post, index) => (
                   <Card mb="2">

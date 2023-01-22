@@ -59,13 +59,13 @@ const wagmiClient = createClient({
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <ChakraProvider>
-      <WagmiConfig client={wagmiClient}>
-        <RainbowKitProvider chains={chains}>
+   <WagmiConfig client={wagmiClient}>
+     <RainbowKitProvider chains={chains}>
+      <ChakraProvider theme={theme}>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <App />
-        </RainbowKitProvider>
-      </WagmiConfig>
-    </ChakraProvider>
+       </ChakraProvider>
+     </RainbowKitProvider>
+   </WagmiConfig>
   </React.StrictMode>,
 )
