@@ -10,9 +10,9 @@ GM means good morning. It's GM o'clock somewhere, so there's never a bad time to
 
 ## Getting Started
 
-First, DM me at [@JoshCStein](https://twitter.com/JoshCStein) or [joshcs.lens](https://www.lensfrens.xyz/joshcs.lens) with your Ethereum wallet address to receive EMINT tokens.
+First, DM me at [@JoshCStein](https://twitter.com/JoshCStein) or [joshcs.lens](https://www.lensfrens.xyz/joshcs.lens) with your Ethereum wallet address to receive EMT tokens.
 
-Then, you will need to connect your Ethereum wallet below to the Ethermint Sovereign Rollup to display the posts from the smart contract and post a GM. You only need EMINT to post.
+Then, you will need to connect your Ethereum wallet below to the Ethermint Sovereign Rollup to display the posts from the smart contract and post a GM. You only need EMT to post.
 
 ## Nice, what's going on under the hood?
 

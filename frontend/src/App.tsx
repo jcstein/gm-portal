@@ -87,8 +87,8 @@ function App() {
         <Heading size="md" pb="3">What is GM?</Heading>
         <Text pb="7">GM means good morning. It's GM o'clock somewhere, so there's never a bad time to say GM, Gm, or gm.</Text>
         <Heading size="md" pb="3">Getting Started</Heading>
-        <Text pb="3">First, DM me at{' '}<Link color="purple.500" href='https://twitter.com/JoshCStein' target="_blank">@JoshCStein</Link>{' '}or{' '}<Link color="purple.500" href='https://www.lensfrens.xyz/joshcs.lens' target="_blank">joshcs.lens</Link>{' '}with your Ethereum wallet address to receive EMINT tokens.</Text>
-        <Text>Then, you can connect your Ethereum wallet below to the Ethermint Sovereign Rollup to display the posts from the smart contract and post a GM. You only need EMINT to post.</Text></div> ) : null}
+        <Text pb="3">First, DM me at{' '}<Link color="purple.500" href='https://twitter.com/JoshCStein' target="_blank">@JoshCStein</Link>{' '}or{' '}<Link color="purple.500" href='https://www.lensfrens.xyz/joshcs.lens' target="_blank">joshcs.lens</Link>{' '}with your Ethereum wallet address to receive EMT tokens.</Text>
+        <Text>Then, you can connect your Ethereum wallet below to the Ethermint Sovereign Rollup to display the posts from the smart contract and post a GM. You only need EMT to post.</Text></div> ) : null}
         {!address ? (<div><br/><Heading size="md" pb="3">Connect your Ethereum wallet to begin ✨</Heading></div> ) : null}
         <ConnectButton />
         {!address ? (<div>
