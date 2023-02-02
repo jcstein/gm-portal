@@ -1,4 +1,4 @@
-# GM Portal
+# GM Portal ☀️
 
 This is the repository for the [GM Portal](https://gmportal.xyz).
 
