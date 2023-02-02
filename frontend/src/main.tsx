@@ -13,7 +13,7 @@ import { ColorModeScript } from "@chakra-ui/react";
 import theme from "./theme";
 
 const ethermintChain: Chain = {
-  id: 69420,
+  id: 9000,
   name: 'Ethermint',
   network: 'ethermint',
   nativeCurrency: {
