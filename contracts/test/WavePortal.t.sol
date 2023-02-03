@@ -10,9 +10,9 @@ contract WavePortalTest is Test {
         waveportal = new WavePortal();
     }
     function testWave() public {
-        waveportal.wave("gm");
+        waveportal.wave();
         waveportal.getTotalWaves();
         waveportal.getAllWaves();
-        waveportal.wave("ge");
+        waveportal.wave();
     }
 }
