@@ -13,7 +13,7 @@ import { ColorModeScript } from "@chakra-ui/react";
 import theme from "./theme";
 
 const ethermintChain: Chain = {
-  id: 69420,
+  id: 42000,
   name: 'Ethermint',
   network: 'ethermint',
   nativeCurrency: {
@@ -23,7 +23,7 @@ const ethermintChain: Chain = {
   },
   rpcUrls: {
     default: {
-      http: ['https://a2b5-159-65-252-178.ngrok.io'],
+      http: ['https://d004-159-65-252-178.ngrok.io'],
       // webSocket: ['wss://159.65.252.178:8546/']
     },
   },
