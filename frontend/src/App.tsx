@@ -60,7 +60,7 @@ function App() {
       setLoading(false);
       setViewState('view-posts')
     } catch (error) {
-      setErrorMessage('You have already GMd today!')
+      setErrorMessage('Something is off - please try again!')
     }
   }
 
