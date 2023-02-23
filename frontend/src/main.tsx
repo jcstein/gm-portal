@@ -23,7 +23,7 @@ const ethermintChain: Chain = {
   },
   rpcUrls: {
     default: {
-      http: ['https://90f9-159-65-252-178.eu.ngrok.io'],
+      http: ['https://ab49-159-65-252-178.ngrok.io'],
       // webSocket: ['wss://159.65.252.178:8546/']
     },
   },
