@@ -35,7 +35,7 @@ cd gm-portal/frontend
 yarn
 
 # Develop site locally
-yarn build
+yarn dev
 ```
 
 ## Adding your contributions
