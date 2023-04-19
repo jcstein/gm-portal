@@ -25,7 +25,7 @@ function App() {
     if(address) {
       getAllWaves()
       getTotalWaves()
-    }``
+    }
   }, [address])
   const [errorMessage, setErrorMessage] = useState('')
   
