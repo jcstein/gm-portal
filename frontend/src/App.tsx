@@ -85,7 +85,9 @@ function App() {
       <VStack p="8" maxWidth="800px">
         <Heading size="2xl" mb="5">GM portal 🧋</Heading>
         {!address ? (<div>
-        <Heading size="md" pb="3">A smart contract demo on Taro testnet 🧋</Heading>
+        <Heading size="md" pb="3">A smart contract demo on Taro testnet</Heading>
+        <Text pb="3">GM portal is a simple smart contract that allows you to send a message to the blockchain. It's a demo of how to interact with a smart contract on 🧋 Taro testnet.</Text>
+        <Text pb="3">Visit the 🚰 faucet or 🌉 bridge Goerli ETH at <Link color="purple.500" href='https://tarotestnet.com' target="_blank">tarotestnet.com</Link> to interact with the GM portal.</Text>
         </div> ) : null}
         {!address ? (<div><br/><Heading size="sm" pb="3">Connect your Ethereum wallet to begin ✨</Heading></div> ) : null}
         <ConnectButton />
