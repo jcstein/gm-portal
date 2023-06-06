@@ -3,14 +3,14 @@ pragma solidity ^0.8.13;
 
 import "forge-std/Script.sol";
 
-import {WavePortal} from "src/WavePortal.sol";
+import {GmPortal} from "src/GmPortal.sol";
 
-contract WavePortalScript is Script {
+contract GmPortalScript is Script {
     function setUp() public {}
 
     function run() public {
         vm.startBroadcast();
-        new WavePortal();
+        new GmPortal();
         vm.stopBroadcast();
     }
 }
