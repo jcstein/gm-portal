@@ -1,7 +1,7 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useState, useEffect, SetStateAction } from 'react'
 import { ethers } from 'ethers'
-import WavePortal from '../WavePortal.json'
+import WavePortal from '../GmPortal.json'
 import { useAccount } from "wagmi";
 import moment from 'moment'
 import { Heading, Flex, VStack, Button, HStack, Text, Link, Card, CardBody, CardHeader, CardFooter, Input } from '@chakra-ui/react';
