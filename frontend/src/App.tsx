@@ -74,6 +74,7 @@ function App() {
 
   return (
     <div>
+      <Flex direction="column" minHeight="100vh">
       <Topbuttons />
       <Flex
         justifyContent="center"
@@ -130,8 +131,9 @@ function App() {
           )
         }
         <br />
-        <Text textAlign="center" fontStyle="italic">This site and smart contract are <Link color="purple.500" href='https://github.com/jcstein/gm-portal' target="_blank">open source</Link>{' '}and{' '}the{' '}<Link color="purple.500" href='https://plausible.io/gmportal.xyz' target="_blank">analytics</Link> are GDPR compliant</Text>
       </VStack>
+      </Flex>
+      <Text textAlign="center" fontStyle="italic" pb="3">This site and smart contract are <Link color="purple.500" href='https://github.com/jcstein/gm-portal' target="_blank">open source</Link>{' '}and{' '}the{' '}<Link color="purple.500" href='https://plausible.io/gmportal.xyz' target="_blank">analytics</Link> are GDPR compliant</Text>
       </Flex>
       </div>
   )
