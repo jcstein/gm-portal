@@ -13,18 +13,18 @@ import { ColorModeScript } from "@chakra-ui/react";
 import theme from "./theme";
 
 const ethermintChain: Chain = {
-  id: 42000,
-  name: 'Ethermint',
-  network: 'ethermint',
+  id: 1582,
+  name: 'Taro testnet',
+  network: 'taro',
   nativeCurrency: {
     decimals: 18,
-    name: 'Ethermint',
-    symbol: 'EMT',
+    name: 'Taro',
+    symbol: 'gETH',
   },
   rpcUrls: {
     default: {
-      http: ['https://d004-159-65-252-178.ngrok.io'],
-      // webSocket: ['wss://159.65.252.178:8546/']
+      http: ['https://taro-testnet.calderachain.xyz/http'],
+      webSocket: ['wss://taro-testnet.calderachain.xyz/ws']
     },
   },
   testnet: false,

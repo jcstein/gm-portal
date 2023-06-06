@@ -8,7 +8,7 @@ import { Heading, Flex, VStack, Button, HStack, Text, Link, Card, CardBody, Card
 import { Topbuttons } from "./Components/topbuttons";
 import './App.css'
 
-const contractAddress = '0x12a30dc769453601578b1701437eac5efa4b8ce0'
+const contractAddress = '0x5dd0a1c2fca0ee49e986931f6cc63c0fc41d0b97'
 
 function App() {
   useEffect(() => {
@@ -84,20 +84,10 @@ function App() {
       <VStack p="8" maxWidth="800px">
         <Heading size="2xl" mb="5">GM Portal</Heading>
         {!address ? (<div>
-        <Heading size="md" pb="3">What is GM?</Heading>
-        <Text pb="7">GM means good morning. It's GM o'clock somewhere, so there's never a bad time to say GM, Gm, or gm.</Text>
-        <Heading size="md" pb="3">Getting Started</Heading>
-        <Text pb="3">First, DM me at{' '}<Link color="purple.500" href='https://twitter.com/JoshCStein' target="_blank">@JoshCStein</Link>{' '}or{' '}<Link color="purple.500" href='https://www.lensfrens.xyz/joshcs.lens' target="_blank">joshcs.lens</Link>{' '}with your Ethereum wallet address to receive EMT tokens.</Text>
-        <Text>Then, you can connect your Ethereum wallet below to the Ethermint Sovereign Rollup to display the posts from the smart contract and post a GM. You only need EMT to post.</Text></div> ) : null}
-        {!address ? (<div><br/><Heading size="md" pb="3">Connect your Ethereum wallet to begin ✨</Heading></div> ) : null}
+        <Heading size="md" pb="3">A smart contract demo on Taro testnet.</Heading>
+        </div> ) : null}
+        {!address ? (<div><br/><Heading size="sm" pb="3">Connect your Ethereum wallet to begin ✨</Heading></div> ) : null}
         <ConnectButton />
-        {!address ? (<div>
-        <br/>
-        <Heading size="md" pb="3">Nice, what's going on under the hood?</Heading>
-        <Text pb="3">This GM Portal is built with{' '}<Link color="purple.500" href='https://celestia.org' target="_blank">Celestia</Link>,{' '}<Link color="purple.500" href='https://rollkit.dev' target="_blank">Rollkit</Link>,{' '}&{' '}<Link color="purple.500" href='https://github.com/celestiaorg/ethermint' target="_blank">Ethermint</Link>.</Text>
-        <Text pb="3">The GM Portal is a smart contract demo on a{' '}<Link color="purple.500" href='https://celestia.org/glossary/sovereign-rollup' target="_blank">sovereign rollup</Link>{' '}built on Celestia to provide{' '}<Link color="purple.500" href='https://celestia.org/glossary/data-availability' target="_blank">data availability</Link>{' '}&{' '}<Link color="purple.500" href='https://ethereum.org/en/developers/docs/consensus-mechanisms' target="_blank">consensus</Link>, leveraging Ethermint with Rollkit as the{' '}<Link color="purple.500" href='https://celestia.org/glossary/execution-environment' target="_blank">execution environment</Link>.</Text>
-        <Text pb="3">This allows users to securely create and share GMs on the blockchain without the need for a centralized server or authority.</Text>
-        <Text>This application is deployed on IPFS and can be accessed through ENS{' '}<Link color="purple.500" href='https://buildmarket.eth.limo' target="_blank">(buildmarket.eth)</Link>{' '}or{' '}<Link color="purple.500" href="https://gmportal.xyz" target="_blank">DNS.</Link>{' '}Read more{' '}<Link color="purple.500" href='https://mirror.xyz/joshcstein.eth/UbInedh4ToAAfsDklzSPb3R1_hVSHIdE97hvxIWYlOo' target="_blank">here 🛸</Link></Text></div> ) : null}
         {address ? (
         <HStack>
           <Button onClick={() => toggleView('view-posts')} colorScheme="purple">View Posts</Button>
