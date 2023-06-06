@@ -1,7 +1,7 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useState, useEffect, SetStateAction } from 'react'
 import { ethers } from 'ethers'
-import WavePortal from '../GmPortal.json'
+import GmPortal from '../GmPortal.json'
 import { useAccount } from "wagmi";
 import moment from 'moment'
 import { Heading, Flex, VStack, Button, HStack, Text, Link, Card, CardBody, CardHeader, CardFooter, Input } from '@chakra-ui/react';
@@ -12,50 +12,50 @@ const contractAddress = '0xd258a856545f03ff60c28681cc741c473aa3eea6'
 
 function App() {
   useEffect(() => {
-    getAllWaves()
-    getTotalWaves()
+    getAllGms()
+    getTotalGms()
   }, [])
   const [viewState, setViewState] = useState('view-posts')
   const [posts, setPosts] = useState([])
   const [message, setMessage] = useState('')
-  const [totalWaves, setTotalWaves] = useState(0)
+  const [totalGms, setTotalGms] = useState(0)
   const { address } = useAccount();
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     if(address) {
-      getAllWaves()
-      getTotalWaves()
+      getAllGms()
+      getTotalGms()
     }
   }, [address])
   const [errorMessage, setErrorMessage] = useState('')
   
-  async function getAllWaves() {
+  async function getAllGms() {
     const provider = new ethers.providers.Web3Provider((window.ethereum as any))
-    const contract = new ethers.Contract(contractAddress, WavePortal.abi, provider)
-    let data = await contract.getAllWaves()
-    data = data.map((d: { waver: string, message: string; timestamp: string }) => ({
-      waver: d['waver'],
+    const contract = new ethers.Contract(contractAddress, GmPortal.abi, provider)
+    let data = await contract.getAllGms()
+    data = data.map((d: { gmer: string, message: string; timestamp: string }) => ({
+      gmer: d['gmer'],
       message: d['message'],
       timestamp: d['timestamp'],
     }))
     setPosts(data)
   }
 
-  async function getTotalWaves() {
+  async function getTotalGms() {
     const provider = new ethers.providers.Web3Provider((window.ethereum as any))
-    const contract = new ethers.Contract(contractAddress, WavePortal.abi, provider)
-    const totalWaves = await contract.getTotalWaves()
-    console.log('total waves', totalWaves)
-    setTotalWaves(totalWaves.toString())
+    const contract = new ethers.Contract(contractAddress, GmPortal.abi, provider)
+    const totalGms = await contract.getTotalGms()
+    console.log('total Gms', totalGms)
+    setTotalGms(totalGms.toString())
   }
 
-  async function wave() {
+  async function gm() {
     setLoading(true);
     try {
       const provider = new ethers.providers.Web3Provider((window.ethereum as any))
       const signer = provider.getSigner()
-      const contract = new ethers.Contract(contractAddress, WavePortal.abi, signer)
-      const tx = await contract.wave(message)
+      const contract = new ethers.Contract(contractAddress, GmPortal.abi, signer)
+      const tx = await contract.gm(message)
       await tx.wait()
       setLoading(false);
       setViewState('view-posts')
@@ -67,8 +67,8 @@ function App() {
   function toggleView(value: SetStateAction<string>) {
     setViewState(value)
     if (value === 'view-posts') {
-      getAllWaves()
-      getTotalWaves()
+      getAllGms()
+      getTotalGms()
     }
   }
 
@@ -99,13 +99,13 @@ function App() {
             <div style={{ textAlign: 'left'}}>
               <div>
               <Heading size="lg" pb="3" textAlign="center">Posts</Heading>
-              <Heading size="md" pb="3" textAlign="center">☀️ Total GMs: {totalWaves}</Heading>
+              <Heading size="md" pb="3" textAlign="center">☀️ Total GMs: {totalGms}</Heading>
               {
                 posts.slice().reverse().map((post, index) => (
                   <Card mb="2">
                   <div key={index}>
                     <CardHeader fontSize="xl" fontWeight="bold">{(post as any).message}</CardHeader>
-                    <CardBody py="0" className="address">📤 From: {(post as any).waver}</CardBody>
+                    <CardBody py="0" className="address">📤 From: {(post as any).gmer}</CardBody>
                     <CardFooter pt="0">⏰ GM'd at: {moment.unix((post as any).timestamp).format('lll')}</CardFooter>
                   </div>
                   </Card>
@@ -124,7 +124,7 @@ function App() {
                   onChange={e => setMessage(e.target.value)}
                 />
                 {errorMessage && <div style={{ padding: '5px' }}>{errorMessage}</div>}
-                <Button onClick={wave} colorScheme="green">Send Post</Button>
+                <Button onClick={gm} colorScheme="green">Send Post</Button>
                 {!errorMessage && loading ? <div style={{padding: '10px'}}>Transaction processing...</div> : null}
             </VStack>
           )
