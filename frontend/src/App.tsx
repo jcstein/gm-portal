@@ -83,7 +83,7 @@ function App() {
         minHeight="90vh"
       >
       <VStack p="8" maxWidth="800px">
-        <Heading size="2xl" mb="5">GM Portal</Heading>
+        <Heading size="2xl" mb="5">GM portal 🧋</Heading>
         {!address ? (<div>
         <Heading size="md" pb="3">A smart contract demo on Taro testnet 🧋</Heading>
         </div> ) : null}
