@@ -1,0 +1,7 @@
+{
+  "transactions": [
+    {
+      "rpc": "https://taro-testnet.calderachain.xyz/http"
+    }
+  ]
+}
