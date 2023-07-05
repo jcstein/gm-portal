@@ -46,7 +46,7 @@ const connectors = connectorsForWallets([
       injectedWallet({ chains }),
       metaMaskWallet({ chains }),
       walletConnectWallet({ chains }),
-      coinbaseWallet({ chains, appName: 'GM portal 🧋' }),
+      coinbaseWallet({ chains, appName: 'GM Portal 🧋' }),
     ],
   },
 ]);
