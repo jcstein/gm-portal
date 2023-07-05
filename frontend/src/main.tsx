@@ -14,20 +14,20 @@ import theme from "./theme";
 
 const ethermintChain: Chain = {
   id: 1582,
-  name: 'Taro testnet',
-  network: 'taro',
+  name: 'Bubs testnet',
+  network: 'bubs',
   nativeCurrency: {
     decimals: 18,
-    name: 'Taro',
+    name: 'Bubs',
     symbol: 'gETH',
   },
   rpcUrls: {
     default: {
-      http: ['https://taro-testnet.calderachain.xyz/http'],
-      webSocket: ['wss://taro-testnet.calderachain.xyz/ws']
+      http: ['https://bubs.calderachain.xyz/http'],
+      webSocket: ['wss://bubs.calderachain.xyz/ws']
     },
   },
-  testnet: false,
+  testnet: true,
 };
 
 const { provider, chains } = configureChains(

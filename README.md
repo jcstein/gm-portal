@@ -10,15 +10,15 @@ GM means good morning. It's GM o'clock somewhere, so there's never a bad time to
 
 ## Getting Started
 
-First, DM me at [@JoshCStein](https://twitter.com/JoshCStein) or [joshcs.lens](https://www.lensfrens.xyz/joshcs.lens) with your Ethereum wallet address to receive EMT tokens.
+First, head to the facuet to get your bubs testnet tokens.
 
-Then, you will need to connect your Ethereum wallet below to the Ethermint Sovereign Rollup to display the posts from the smart contract and post a GM. You only need EMT to post.
+Then, you will need to connect your Ethereum wallet below to the Bubs Rollup to display the posts from the smart contract and post a GM.
 
 ## Nice, what's going on under the hood?
 
-This GM portal is built with Celestia, RollKit, & Ethermint.
+This GM portal is built with Celestia, OP Stack, & Caldera.
 
-The GM portal is a smart contract demo on a sovereign rollup built on Celestia to provide data availability and consensus, leveraging Ethermint with RollKit as the execution environment.
+The GM portal is a smart contract demo on a rollup built on Celestia to provide data availability and consensus, leveraging the OP Stack as the execution environment.
 
 This allows users to securely create and share blog posts on the blockchain without the need for a centralized server or authority.
 
@@ -40,9 +40,9 @@ yarn dev
 
 ## Adding your contributions
 
-This site was built with a mix of the [Ethermint with Rollkit tutorial](https://rollkit.dev/docs/tutorials/ethermint)
+<!-- This site was built with a mix of the [Ethermint with Rollkit tutorial](https://rollkit.dev/docs/tutorials/ethermint)
 and [Celestia's full stack modular blockchain development guide](https://docs.celestia.org/developers/full-stack-modular-development-guide/).
-The smart contract on this dapp was deployed with Foundry.
+The smart contract on this dapp was deployed with Foundry. -->
 
 If you would like to contribute to this repository, please submit an
 [issue](https://github.com/jcstein/gm-portal/issues/new/choose) and

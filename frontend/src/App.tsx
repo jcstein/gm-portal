@@ -8,7 +8,7 @@ import { Heading, Flex, VStack, Button, HStack, Text, Link, Card, CardBody, Card
 import { Topbuttons } from "./Components/topbuttons";
 import './App.css'
 
-const contractAddress = '0x8b700da40b95c4b6d0bdc9d23380acb5d2bec2d5'
+const contractAddress = '0x8bd8748b0f5a5900a9c100fd8a61ae96736e2181'
 
 function App() {
   useEffect(() => {
@@ -85,9 +85,9 @@ function App() {
       <VStack p="8" maxWidth="800px">
         <Heading size="2xl" mb="5">GM portal 🧋</Heading>
         {!address ? (<div>
-        <Heading size="md" pb="3">A smart contract demo on Taro testnet</Heading>
-        <Text pb="3">GM portal is a simple smart contract that allows you to send a message to the blockchain. It's a demo of how to interact with a smart contract on 🧋 Taro testnet.</Text>
-        <Text pb="3">Visit the 🚰 faucet at <Link color="purple.500" href='https://tarotestnet.com' target="_blank">tarotestnet.com</Link> to interact with the GM portal.</Text>
+        <Heading size="md" pb="3">A smart contract demo on Bubs testnet</Heading>
+        <Text pb="3">GM portal is a simple smart contract that allows you to send a message to the blockchain. It's a demo of how to interact with a smart contract on 🧋 Bubs testnet.</Text>
+        <Text pb="3">Visit the 🚰 faucet at <Link color="purple.500" href='https://bubstestnet.com' target="_blank">bubstestnet.com</Link> to interact with the GM portal.</Text>
         </div> ) : null}
         {!address ? (<div><br/><Heading size="sm" pb="3">Connect your Ethereum wallet to begin ✨</Heading></div> ) : null}
         <ConnectButton />
