@@ -83,11 +83,11 @@ function App() {
         minHeight="90vh"
       >
       <VStack p="8" maxWidth="800px">
-        <Heading size="2xl" mb="5">GM Portal 🧋</Heading>
+        <Heading size="2xl" mb="5">gm portal 🧋</Heading>
         {!address ? (<div>
         <Heading size="md" pb="3">A smart contract demo on Bubs testnet</Heading>
-        <Text pb="3">GM Portal is a simple smart contract that allows you to send a message to the blockchain. It's a demo of how to interact with a smart contract on 🧋 Bubs testnet.</Text>
-        <Text pb="3">Visit the 🚰 faucet at <Link color="purple.500" href='https://bubstestnet.com' target="_blank">bubstestnet.com</Link> to interact with the GM Portal.</Text>
+        <Text pb="3">gm portal is a simple smart contract that allows you to send a message to the blockchain. It's a demo of how to interact with a smart contract on 🧋 Bubs testnet.</Text>
+        <Text pb="3">Visit the 🚰 faucet at <Link color="purple.500" href='https://bubstestnet.com' target="_blank">bubstestnet.com</Link> to interact with the gm portal.</Text>
         </div> ) : null}
         {!address ? (<div><br/><Heading size="sm" pb="3">Connect your Ethereum wallet to begin ✨</Heading></div> ) : null}
         <ConnectButton />

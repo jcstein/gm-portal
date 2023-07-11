@@ -1,6 +1,6 @@
-# GM Portal ☀️
+# gm portal ☀️
 
-This is the repository for the [GM Portal](https://gmportal.xyz).
+This is the repository for the [gm portal](https://gmportal.xyz).
 
 Contracts can be found in the [`contracts`](./contracts) directory, and the frontend in [`frontend`](./frontend).
 
@@ -16,9 +16,9 @@ Then, you will need to connect your Ethereum wallet below to the Bubs Rollup to 
 
 ## Nice, what's going on under the hood?
 
-This GM Portal is built with Celestia, OP Stack, & Caldera.
+This gm portal is built with Celestia, OP Stack, & Caldera.
 
-The GM Portal is a smart contract demo on a rollup built on Celestia to provide data availability and consensus, leveraging the OP Stack as the execution environment.
+The gm portal is a smart contract demo on a rollup built on Celestia to provide data availability and consensus, leveraging the OP Stack as the execution environment.
 
 This allows users to securely create and share blog posts on the blockchain without the need for a centralized server or authority.
 
