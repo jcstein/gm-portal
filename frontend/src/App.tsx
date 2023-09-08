@@ -83,10 +83,10 @@ function App() {
         minHeight="90vh"
       >
       <VStack p="8" maxWidth="800px">
-        <Heading size="2xl" mb="5">gm portal</Heading>
+        <Heading size="2xl" mb="5">ooga booga portal 🐻🍯</Heading>
         {!address ? (<div>
         <Heading size="md" pb="3">A smart contract demo for the Polaris EVM x Rollkit integration</Heading>
-        <Text pb="3">gm portal is a simple smart contract that allows you to send a message to the blockchain. It's a demo of how to interact with a smart contract on the Polaris EVM.</Text>
+        <Text pb="3">ooga booga portal is a simple smart contract that allows you to send a message (ooga booga) to the blockchain. It's a demo of how to interact with a smart contract on the Polaris EVM.</Text>
         </div> ) : null}
         {!address ? (<div><br/><Heading size="sm" pb="3">Connect your Ethereum wallet to begin ✨</Heading></div> ) : null}
         <ConnectButton />

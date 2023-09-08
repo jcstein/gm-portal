@@ -1,12 +1,16 @@
-# gm portal ☀️
+# ooga booga portal ☀️
 
-This is the repository for the [gm portal](https://gmportal.xyz).
+This is the branch for the Polaris x Rollkit EVM "ooga booga portal" previously seen on Bubs testnet as the [gm portal](https://gmportal.xyz).
 
 Contracts can be found in the [`contracts`](./contracts) directory, and the frontend in [`frontend`](./frontend).
 
 ## What is GM?
 
 GM means good morning. It's GM o'clock somewhere, so there's never a bad time to say GM, Gm, or gm.
+
+## What is ooga booga?
+
+ooga booga 🐻🍯
 
 ## Getting Started
 
@@ -19,7 +23,8 @@ First, follow the [Rollkit tutorial](https://rollkit.dev/tutorials/polaris-evm).
 git clone https://github.com/jcstein/gm-portal.git
 
 # CD into directory, and frontend
-cd gm-portal/frontend
+cd gm-portal && git checkout polaris
+cd frontend
 
 # Install dependencies
 yarn
