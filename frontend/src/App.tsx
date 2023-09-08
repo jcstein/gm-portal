@@ -8,7 +8,7 @@ import { Heading, Flex, VStack, Button, HStack, Text, Link, Card, CardBody, Card
 import { Topbuttons } from "./Components/topbuttons";
 import './App.css'
 
-const contractAddress = '0x8bd8748b0f5a5900a9c100fd8a61ae96736e2181'
+const contractAddress = '0x18Df82C7E422A42D47345Ed86B0E935E9718eBda'
 
 function App() {
   useEffect(() => {
@@ -83,11 +83,10 @@ function App() {
         minHeight="90vh"
       >
       <VStack p="8" maxWidth="800px">
-        <Heading size="2xl" mb="5">gm portal 🧋</Heading>
+        <Heading size="2xl" mb="5">gm portal</Heading>
         {!address ? (<div>
-        <Heading size="md" pb="3">A smart contract demo on Bubs testnet</Heading>
-        <Text pb="3">gm portal is a simple smart contract that allows you to send a message to the blockchain. It's a demo of how to interact with a smart contract on 🧋 Bubs testnet.</Text>
-        <Text pb="3">Visit the 🚰 faucet at <Link color="purple.500" href='https://bubstestnet.com' target="_blank">bubstestnet.com</Link> to interact with the gm portal.</Text>
+        <Heading size="md" pb="3">A smart contract demo for the Polaris EVM x Rollkit integration</Heading>
+        <Text pb="3">gm portal is a simple smart contract that allows you to send a message to the blockchain. It's a demo of how to interact with a smart contract on the Polaris EVM.</Text>
         </div> ) : null}
         {!address ? (<div><br/><Heading size="sm" pb="3">Connect your Ethereum wallet to begin ✨</Heading></div> ) : null}
         <ConnectButton />

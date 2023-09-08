@@ -13,18 +13,18 @@ import { ColorModeScript } from "@chakra-ui/react";
 import theme from "./theme";
 
 const ethermintChain: Chain = {
-  id: 1582,
-  name: 'Bubs testnet',
-  network: 'bubs',
+  id: 2061,
+  name: 'Polaris EVM x Rollkit',
+  network: 'berakit',
   nativeCurrency: {
     decimals: 18,
-    name: 'Bubs',
-    symbol: 'gETH',
+    name: 'Berakit',
+    symbol: 'tBERA',
   },
   rpcUrls: {
     default: {
-      http: ['https://bubs.calderachain.xyz/http'],
-      webSocket: ['wss://bubs.calderachain.xyz/ws']
+      http: ['http://localhost:8545'],
+      // webSocket: ['wss://bubs.calderachain.xyz/ws']
     },
   },
   testnet: true,
@@ -46,7 +46,7 @@ const connectors = connectorsForWallets([
       injectedWallet({ chains }),
       metaMaskWallet({ chains }),
       walletConnectWallet({ chains }),
-      coinbaseWallet({ chains, appName: 'gm portal 🧋' }),
+      coinbaseWallet({ chains, appName: 'gm portal' }),
     ],
   },
 ]);

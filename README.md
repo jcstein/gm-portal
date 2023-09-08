@@ -10,17 +10,7 @@ GM means good morning. It's GM o'clock somewhere, so there's never a bad time to
 
 ## Getting Started
 
-First, head to the facuet to get your bubs testnet tokens.
-
-Then, you will need to connect your Ethereum wallet below to the Bubs Rollup to display the posts from the smart contract and post a GM.
-
-## Nice, what's going on under the hood?
-
-This gm portal is built with Celestia, OP Stack, & Caldera.
-
-The gm portal is a smart contract demo on a rollup built on Celestia to provide data availability and consensus, leveraging the OP Stack as the execution environment.
-
-This allows users to securely create and share blog posts on the blockchain without the need for a centralized server or authority.
+First, follow the [Rollkit tutorial](https://rollkit.dev/tutorials/polaris-evm).
 
 ## Developing this site yourself
 
