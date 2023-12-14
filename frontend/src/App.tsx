@@ -1,4 +1,3 @@
-import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useState, useEffect, SetStateAction } from 'react'
 import { ethers } from 'ethers'
 import GmPortal from '../GmPortal.json'
@@ -90,7 +89,6 @@ function App() {
         <Text pb="3">Visit the 🚰 faucet at <Link color="purple.500" href='https://bubstestnet.com' target="_blank">bubstestnet.com</Link> to interact with the gm portal.</Text>
         </div> ) : null}
         {!address ? (<div><br/><Heading size="sm" pb="3">Connect your Ethereum wallet to begin ✨</Heading></div> ) : null}
-        <ConnectButton />
         {address ? (
         <HStack>
           <Button onClick={() => toggleView('view-posts')} colorScheme="purple">View Posts</Button>
@@ -101,7 +99,7 @@ function App() {
           viewState === 'view-posts' && address && (
             <div style={{ textAlign: 'left'}}>
               <div>
-              <Heading size="lg" pb="3" textAlign="center">Posts</Heading>
+              <Heading size="lg" pb="3" pt="5"  textAlign="center">Posts</Heading>
               <Heading size="md" pb="3" textAlign="center">☀️ Total GMs: {totalGms}</Heading>
               {
                 posts.slice().reverse().map((post, index) => (
