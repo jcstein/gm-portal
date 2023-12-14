@@ -11,10 +11,10 @@
     "linkReferences": {}
   },
   "methodIdentifiers": {},
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"StdChains provides information about EVM compatible chains that can be used in scripts/tests. For each chain, the chain's name, chain ID, and a default RPC URL are provided. Chains are identified by their alias, which is the same as the alias in the `[rpc_endpoints]` section of the `foundry.toml` file. For best UX, ensure the alias in the `foundry.toml` file match the alias used in this contract, which can be found as the first argument to the `setChainWithDefaultRpcUrl` call in the `initialize` function. There are two main ways to use this contract:   1. Set a chain with `setChain(string memory chainAlias, Chain memory chain)`   2. Get a chain with `getChain(string memory chainAlias)` or `getChain(uint256 chainId)`. The first time either of those are used, chains are initialized with the default set of RPC URLs. This is done in `initialize`, which uses `setChainWithDefaultRpcUrl`. Defaults are recorded in `defaultRpcUrls`. The `setChain` function is straightforward, and it simply saves off the given chain data. The `getChain` methods use `getChainWithUpdatedRpcUrl` to return a chain. For example, let's say we want to retrieve `mainnet`'s RPC URL:   - If you haven't set any mainnet chain info with `setChain` and you haven't specified that     chain in `foundry.toml`, the default data and RPC URL will be returned.   - If you have set a mainnet RPC URL in `foundry.toml` it will return that, if valid (e.g. if     a URL is given or if an environment variable is given and that environment variable exists).     Otherwise, the default data is returned.   - If you specified data with `setChain` it will return that. Summarizing the above, the prioritization hierarchy is `setChain` -> `foundry.toml` -> defaults.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/forge-std/src/StdChains.sol\":\"StdChains\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"lib/forge-std/src/StdChains.sol\":{\"keccak256\":\"0xd9f9791f56c2afcd841237417d5a55fa8b69de2c1b528ddbfc7d7823fe136606\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f66271850d38488984ec1e38aeb57df1cda53538b2ddd19e2164c767792905f0\",\"dweb:/ipfs/QmetNJMTfgJ7SCNMwfLrZEwnL3xdNaBY5vMiqrRrUWjjes\"]},\"lib/forge-std/src/Vm.sol\":{\"keccak256\":\"0xfd793ebfb854f707ccf9dfec320b3b75d0d73ba54af0dfae727862fe93bc1cfd\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9a0a39917aabf39d981b17d1a06c9b82377917c3a0eedce8e9dc00df5c096bf9\",\"dweb:/ipfs/Qme7GpiHd32FFKYNbY4vdhiiciWPV1z1Uwtj1KDQAusxki\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.22+commit.4fc1097e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"StdChains provides information about EVM compatible chains that can be used in scripts/tests. For each chain, the chain's name, chain ID, and a default RPC URL are provided. Chains are identified by their alias, which is the same as the alias in the `[rpc_endpoints]` section of the `foundry.toml` file. For best UX, ensure the alias in the `foundry.toml` file match the alias used in this contract, which can be found as the first argument to the `setChainWithDefaultRpcUrl` call in the `initialize` function. There are two main ways to use this contract:   1. Set a chain with `setChain(string memory chainAlias, Chain memory chain)`   2. Get a chain with `getChain(string memory chainAlias)` or `getChain(uint256 chainId)`. The first time either of those are used, chains are initialized with the default set of RPC URLs. This is done in `initialize`, which uses `setChainWithDefaultRpcUrl`. Defaults are recorded in `defaultRpcUrls`. The `setChain` function is straightforward, and it simply saves off the given chain data. The `getChain` methods use `getChainWithUpdatedRpcUrl` to return a chain. For example, let's say we want to retrieve `mainnet`'s RPC URL:   - If you haven't set any mainnet chain info with `setChain` and you haven't specified that     chain in `foundry.toml`, the default data and RPC URL will be returned.   - If you have set a mainnet RPC URL in `foundry.toml` it will return that, if valid (e.g. if     a URL is given or if an environment variable is given and that environment variable exists).     Otherwise, the default data is returned.   - If you specified data with `setChain` it will return that. Summarizing the above, the prioritization hierarchy is `setChain` -> `foundry.toml` -> defaults.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/forge-std/src/StdChains.sol\":\"StdChains\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"lib/forge-std/src/StdChains.sol\":{\"keccak256\":\"0xd9f9791f56c2afcd841237417d5a55fa8b69de2c1b528ddbfc7d7823fe136606\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f66271850d38488984ec1e38aeb57df1cda53538b2ddd19e2164c767792905f0\",\"dweb:/ipfs/QmetNJMTfgJ7SCNMwfLrZEwnL3xdNaBY5vMiqrRrUWjjes\"]},\"lib/forge-std/src/Vm.sol\":{\"keccak256\":\"0xfd793ebfb854f707ccf9dfec320b3b75d0d73ba54af0dfae727862fe93bc1cfd\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9a0a39917aabf39d981b17d1a06c9b82377917c3a0eedce8e9dc00df5c096bf9\",\"dweb:/ipfs/Qme7GpiHd32FFKYNbY4vdhiiciWPV1z1Uwtj1KDQAusxki\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
-      "version": "0.8.17+commit.8df45f5f"
+      "version": "0.8.22+commit.4fc1097e"
     },
     "language": "Solidity",
     "output": {
@@ -32,8 +32,8 @@
     },
     "settings": {
       "remappings": [
-        ":ds-test/=lib/forge-std/lib/ds-test/src/",
-        ":forge-std/=lib/forge-std/src/"
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/"
       ],
       "optimizer": {
         "enabled": true,
@@ -540,6 +540,8 @@
             },
             "typeName": {
               "id": 2744,
+              "keyName": "",
+              "keyNameLocation": "-1:-1:-1",
               "keyType": {
                 "id": 2741,
                 "name": "string",
@@ -556,6 +558,8 @@
                 "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Chain_$2740_storage_$",
                 "typeString": "mapping(string => struct StdChains.Chain)"
               },
+              "valueName": "",
+              "valueNameLocation": "-1:-1:-1",
               "valueType": {
                 "id": 2743,
                 "nodeType": "UserDefinedTypeName",
@@ -597,6 +601,8 @@
             },
             "typeName": {
               "id": 2748,
+              "keyName": "",
+              "keyNameLocation": "-1:-1:-1",
               "keyType": {
                 "id": 2746,
                 "name": "string",
@@ -613,6 +619,8 @@
                 "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_string_storage_$",
                 "typeString": "mapping(string => string)"
               },
+              "valueName": "",
+              "valueNameLocation": "-1:-1:-1",
               "valueType": {
                 "id": 2747,
                 "name": "string",
@@ -644,6 +652,8 @@
             },
             "typeName": {
               "id": 2752,
+              "keyName": "",
+              "keyNameLocation": "-1:-1:-1",
               "keyType": {
                 "id": 2750,
                 "name": "uint256",
@@ -660,6 +670,8 @@
                 "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
                 "typeString": "mapping(uint256 => string)"
               },
+              "valueName": "",
+              "valueNameLocation": "-1:-1:-1",
               "valueType": {
                 "id": 2751,
                 "name": "string",
@@ -4505,6 +4517,7 @@
                                     "statements": [
                                       {
                                         "AST": {
+                                          "nativeSrc": "6148:80:4",
                                           "nodeType": "YulBlock",
                                           "src": "6148:80:4",
                                           "statements": [
@@ -4515,6 +4528,7 @@
                                                     "arguments": [
                                                       {
                                                         "kind": "number",
+                                                        "nativeSrc": "6185:2:4",
                                                         "nodeType": "YulLiteral",
                                                         "src": "6185:2:4",
                                                         "type": "",
@@ -4522,15 +4536,18 @@
                                                       },
                                                       {
                                                         "name": "err",
+                                                        "nativeSrc": "6189:3:4",
                                                         "nodeType": "YulIdentifier",
                                                         "src": "6189:3:4"
                                                       }
                                                     ],
                                                     "functionName": {
                                                       "name": "add",
+                                                      "nativeSrc": "6181:3:4",
                                                       "nodeType": "YulIdentifier",
                                                       "src": "6181:3:4"
                                                     },
+                                                    "nativeSrc": "6181:12:4",
                                                     "nodeType": "YulFunctionCall",
                                                     "src": "6181:12:4"
                                                   },
@@ -4538,34 +4555,40 @@
                                                     "arguments": [
                                                       {
                                                         "name": "err",
+                                                        "nativeSrc": "6201:3:4",
                                                         "nodeType": "YulIdentifier",
                                                         "src": "6201:3:4"
                                                       }
                                                     ],
                                                     "functionName": {
                                                       "name": "mload",
+                                                      "nativeSrc": "6195:5:4",
                                                       "nodeType": "YulIdentifier",
                                                       "src": "6195:5:4"
                                                     },
+                                                    "nativeSrc": "6195:10:4",
                                                     "nodeType": "YulFunctionCall",
                                                     "src": "6195:10:4"
                                                   }
                                                 ],
                                                 "functionName": {
                                                   "name": "revert",
+                                                  "nativeSrc": "6174:6:4",
                                                   "nodeType": "YulIdentifier",
                                                   "src": "6174:6:4"
                                                 },
+                                                "nativeSrc": "6174:32:4",
                                                 "nodeType": "YulFunctionCall",
                                                 "src": "6174:32:4"
                                               },
+                                              "nativeSrc": "6174:32:4",
                                               "nodeType": "YulExpressionStatement",
                                               "src": "6174:32:4"
                                             }
                                           ]
                                         },
                                         "documentation": "@solidity memory-safe-assembly",
-                                        "evmVersion": "london",
+                                        "evmVersion": "paris",
                                         "externalReferences": [
                                           {
                                             "declaration": 2999,
@@ -7877,7 +7900,8 @@
         "name": "StdChains",
         "nameLocation": "1973:9:4",
         "scope": 3245,
-        "usedErrors": []
+        "usedErrors": [],
+        "usedEvents": []
       }
     ],
     "license": "MIT"

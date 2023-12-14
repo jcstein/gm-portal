@@ -12,26 +12,26 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { ColorModeScript } from "@chakra-ui/react";
 import theme from "./theme";
 
-const ethermintChain: Chain = {
-  id: 1582,
-  name: 'Bubs testnet',
-  network: 'bubs',
+const orbitNitroChain: Chain = {
+  id: 412346,
+  name: 'Nitro Rollup',
+  network: 'nitro',
   nativeCurrency: {
     decimals: 18,
-    name: 'Bubs',
+    name: 'Nitro Rollup',
     symbol: 'gETH',
   },
   rpcUrls: {
     default: {
-      http: ['https://bubs.calderachain.xyz/http'],
-      webSocket: ['wss://bubs.calderachain.xyz/ws']
+      http: ['http://localhost:8547'],
+      webSocket: ['ws://localhost:8548']
     },
   },
   testnet: true,
 };
 
 const { provider, chains } = configureChains(
-  [ethermintChain],
+  [orbitNitroChain],
   [
     jsonRpcProvider({
       rpc: chain => ({ http: chain.rpcUrls.default.http[0] }),

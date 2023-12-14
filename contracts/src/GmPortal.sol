@@ -15,7 +15,7 @@ contract GmPortal {
     Gm[] gms;
     mapping(address => bool) public usersWhoGmd;
     constructor() {
-        console.log("i am a smart contract on Bubs testnet. gm!");
+        console.log("i am a smart contract on an Arbitrum Nitro x Celestia rollup devnet. gm!");
     }
     function gm(string memory _message) public {
         totalGms += 1;
